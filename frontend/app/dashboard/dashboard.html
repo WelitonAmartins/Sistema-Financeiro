@@ -1,14 +1,14 @@
 <content-header titulo="Dashboard" subtitulo="Versão 1.0"></content-header>
 
 
-<section class="content" ng-controller="dashController">
+<section class="content" ng-controller="dashController as ctrl">
 
-    <value-box grid="4" cor-class="bg-green" icone-class="fa fa-bank" valor="{{ credit | number: 2 }}" text="Total de Créditos">
+    <value-box grid="4" cor-class="bg-green" icone-class="fa fa-bank" valor="{{ ctrl.credit | number: 2 }}" text="Total de Créditos">
     </value-box>
 
-    <value-box grid="4" cor-class="bg-red" icone-class="fa fa-credit-card" valor="{{ debt | number: 2 }}" text="Total de Débitos">
+    <value-box grid="4" cor-class="bg-red" icone-class="fa fa-credit-card" valor="{{ ctrl.debt | number: 2 }}" text="Total de Débitos">
     </value-box>
 
-    <value-box grid="4" cor-class="bg-blue" icone-class="fa fa-money" valor="{{ total | number: 2 }}" text="Valor Consolidado">
+    <value-box grid="4" cor-class="bg-blue" icone-class="fa fa-money" valor="{{ ctrl.total | number: 2 }}" text="Valor Consolidado">
     </value-box>
 </section>
